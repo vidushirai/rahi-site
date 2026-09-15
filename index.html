@@ -1,1 +1,33 @@
-<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=privacy.html"><title>rāhī</title><a href="privacy.html">rāhī privacy policy</a>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rāhī</title>
+<style>
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #cec2ff; color: #2b1f22; font: 18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 24px; box-sizing: border-box; text-align: center; }
+  main { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .mark { height: 72px; width: auto; }
+  p { margin: 0; max-width: 34ch; }
+  .muted { color: #6f5a75; font-size: 15px; }
+  a { color: #874f92; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <svg class="mark" viewBox="36 -709 1763 724" height="72" role="img" aria-label="rāhī"><path fill="#874f92" d="M214 0L55 0L46-28L63-33Q87-38 94.50-52.50Q102-67 102-101L102-101L102-355Q102-375 84-375L84-375L45-375L36-399Q62-423 96.50-438Q131-453 156-453L156-453Q170-453 177.50-445Q185-437 185-425L185-425L185-326L190-326Q206-387 238.50-424Q271-461 309-461L309-461Q345-461 370.50-437.50Q396-414 396-369L396-369Q396-335 371-312Q346-289 308-289L308-289Q290-289 290-298L290-298Q290-305 302-320Q314-335 314-360L314-360Q314-396 285-396L285-396Q267-396 243.50-372Q220-348 202.50-292.50Q185-237 185-142L185-142Q185-102 191.50-76.50Q198-51 214-28L214-28L225-14L214 0Z M789-559L544-559Q544-576 550-598Q556-620 569-631L569-631L812-631Q812-614 807-592Q802-570 789-559L789-559ZM600 13L600 13Q558 13 520.50-11.50Q483-36 459.50-85.50Q436-135 436-208L436-208Q436-325 499.50-393Q563-461 671-461L671-461Q713-461 759.50-451.50Q806-442 852-439L852-439L864-428L851-411Q846-402 842.50-395Q839-388 839-375L839-375L839-80Q839-52 868-52L868-52Q890-52 913-68L913-68L930-45Q906-19 879.50-3Q853 13 830 13L830 13Q793 13 775.50-9.50Q758-32 758-83L758-83Q720-28 681-7.50Q642 13 600 13ZM635-58L635-58Q670-58 701.50-77.50Q733-97 758-140L758-140L758-385Q738-399 715.50-405Q693-411 670-411L670-411Q605-411 568.50-362.50Q532-314 532-225L532-225Q532-163 547-126.50Q562-90 585.50-74Q609-58 635-58Z M1401 15L1401 15Q1364 15 1348-8Q1332-31 1332-82L1332-82L1332-297Q1332-343 1314.50-367.50Q1297-392 1254-392L1254-392Q1215-392 1185-361Q1155-330 1138.50-274.50Q1122-219 1122-145L1122-145Q1122-103 1129-77Q1136-51 1152-28L1152-28L1163-14L1152 0L993 0L982-28L1002-33Q1025-38 1032.50-52.50Q1040-67 1040-101L1040-101L1040-611Q1040-631 1022-631L1022-631L981-631L974-654Q1000-678 1033.50-693.50Q1067-709 1092-709L1092-709Q1106-709 1114-701Q1122-693 1122-680L1122-680L1122-326Q1145-385 1193-423Q1241-461 1293-461L1293-461Q1361-461 1387.50-421.50Q1414-382 1414-297L1414-297L1414-78Q1414-47 1440-47L1440-47Q1461-47 1485-65L1485-65L1504-43Q1479-17 1451.50-1Q1424 15 1401 15Z M1777-559L1533-559Q1533-576 1538-598Q1543-620 1556-631L1556-631L1799-631Q1799-614 1794.50-592Q1790-570 1777-559L1777-559ZM1688 13L1688 13Q1651 13 1634.50-9.50Q1618-32 1618-83L1618-83L1618-363Q1618-385 1600-385L1600-385L1559-385L1552-407Q1578-431 1611.50-446Q1645-461 1670-461L1670-461Q1684-461 1692-453.50Q1700-446 1700-434L1700-434L1700-80Q1700-49 1727-49L1727-49Q1748-49 1773-68L1773-68L1790-45Q1765-19 1737.50-3Q1710 13 1688 13Z"/></svg>
+  <p id="tag">a personal travel journal. a map of everywhere you’ve been, the trips that got you there, and the memories you pin to places.</p>
+  <p id="confirmed" hidden>your email is confirmed. go back to the app and sign in.</p>
+  <p class="muted">in testing on iOS and Android · <a href="privacy.html">privacy policy</a></p>
+</main>
+<script>
+  // Supabase sends people here after an email link, with the type in the URL fragment.
+  if (/type=(signup|recovery|email_change|magiclink)/.test(location.hash)) {
+    document.getElementById("tag").hidden = true;
+    document.getElementById("confirmed").hidden = false;
+    history.replaceState(null, "", location.pathname);
+  }
+</script>
+</body>
+</html>
